@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pest Control Pricing & Cost Calculator (INR ₹) | Defendra</title>
+  <meta name="description" content="Transparent pest control pricing and live service cost calculator. Estimated ranges in INR for residential and commercial treatments with 365-day guarantee.">
+  <meta name="keywords" content="pest control cost calculator, pest control pricing inr, termite treatment cost, fumigation rates, commercial pest contract">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/brand/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/banners.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/site-motion.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="Defendra Pest Control Homepage">
+          <span class="brand-logo__mark"><img src="assets/images/brand/defendra-mark.svg" alt="" width="30" height="30"></span>
+          <span class="brand-logo__text">
+            <span class="brand-logo__name">DEFENDRA</span>
+            <span class="brand-logo__tagline">PEST CONTROL &amp; FUMIGATION</span>
+          </span>
+        </a>
+
+        <ul class="nav-menu" role="menubar">
+          <li class="nav-item--dropdown" role="none">
+            <a href="index.html" class="nav-link " role="menuitem" aria-haspopup="true">
+              Home <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="index.html" class="nav-dropdown__link " role="menuitem">Home 1 (Defense Hero)</a>
+              <a href="index-2.html" class="nav-dropdown__link " role="menuitem">Home 2 (Fumigation Hero)</a>
+            </div>
+          </li>
+          <li class="nav-item--dropdown" role="none">
+            <a href="services.html" class="nav-link " role="menuitem" aria-haspopup="true">
+              Services <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="services.html" class="nav-dropdown__link " role="menuitem">All Pest Services</a>
+              <a href="service-details.html" class="nav-dropdown__link " role="menuitem">Service Details (Protocol Deep-Dive)</a>
+            </div>
+          </li>
+          <li role="none"><a href="areas-served.html" class="nav-link " role="menuitem">Areas Served</a></li>
+          <li role="none"><a href="pricing.html" class="nav-link active" role="menuitem">Pricing Guide</a></li>
+          <li role="none"><a href="about.html" class="nav-link " role="menuitem">About Us</a></li>
+          <li role="none"><a href="contact.html" class="nav-link " role="menuitem">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <div class="header-toggles">
+            <button type="button" class="rtl-toggle-btn" aria-label="Toggle text direction RTL/LTR" title="Toggle RTL/LTR">
+              <span style="font-family: var(--font-heading); font-weight: 700; font-size: 0.75rem;">RTL</span>
+            </button>
+            <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light theme" title="Toggle Theme">
+              <i data-lucide="moon" class="theme-icon-moon" style="width: 16px; height: 16px;"></i>
+              <i data-lucide="sun" class="theme-icon-sun" style="width: 16px; height: 16px; display: none;"></i>
+            </button>
+          </div>
+          <a href="inspection-booking.html" class="btn btn-primary">
+            <i data-lucide="calendar-check" style="width: 18px; height: 18px;"></i> Book Inspection
+          </a>
+          <button type="button" class="mobile-menu-toggle" aria-label="Open mobile navigation menu">
+            <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer__header">
+      <div class="brand-logo">
+        <span class="brand-logo__mark"><img src="assets/images/brand/defendra-mark.svg" alt="" width="30" height="30"></span>
+        <span class="brand-logo__name" style="font-size: 1.4rem;">DEFENDRA</span>
+      </div>
+      <button type="button" class="mobile-drawer__close" aria-label="Close navigation drawer">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+    </div>
+    <nav style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 24px;">
+      <a href="index.html" class="mobile-nav-link ">Home 1 (Defense Hero)</a>
+      <a href="index-2.html" class="mobile-nav-link ">Home 2 (Fumigation Hero)</a>
+      <a href="services.html" class="mobile-nav-link ">All Pest Services</a>
+      <a href="service-details.html" class="mobile-nav-link ">Service Details</a>
+      <a href="areas-served.html" class="mobile-nav-link ">Areas Served</a>
+      <a href="pricing.html" class="mobile-nav-link active">Pricing Guide</a>
+      <a href="about.html" class="mobile-nav-link ">About Us</a>
+      <a href="contact.html" class="mobile-nav-link ">Contact</a>
+    </nav>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+      <a href="tel:18004197825" class="btn btn-outline-light btn-full">
+        <i data-lucide="phone-call" style="width: 16px; height: 16px;"></i> Call 1800-419-7825
+      </a>
+      <a href="inspection-booking.html" class="btn btn-primary btn-full">
+        <i data-lucide="calendar-check" style="width: 16px; height: 16px;"></i> Book Inspection
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Header Banner -->
+    <section class="banner--pricing site-section site-section--dark site-section--compact" style="border-bottom: 2px solid var(--color-yellow); padding-top: calc(var(--header-height) + var(--space-8));">
+      <div class="container">
+        <nav aria-label="Breadcrumbs" style="margin-bottom: var(--space-3);">
+          <ol style="display: flex; gap: 8px; font-size: 0.8125rem; color: var(--text-on-dark-muted);">
+            <li><a href="index.html" style="color: var(--color-yellow);">Home</a></li>
+            <li>/</li>
+            <li aria-current="page" style="color: var(--color-ivory);">Pricing &amp; Live Estimator</li>
+          </ol>
+        </nav>
+        <span class="text-overline" style="color: var(--color-yellow);">UPFRONT ESTIMATES // NO SURPRISES</span>
+        <h1 style="color: var(--color-ivory); margin-bottom: var(--space-3);">
+          TRANSPARENT PEST CONTROL PRICING GUIDE
+        </h1>
+        <p class="lead" style="color: var(--text-on-dark-muted); max-width: 760px; margin: 0;">
+          Sample estimated investment ranges in Indian Rupees (₹) for residential properties and commercial establishments. Backed by the Defendra 365-Day Retreatment Guarantee.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Cost Calculator (calculator.js) -->
+    <section class="site-section" style="background-color: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container" id="pestCostCalculator">
+        <div class="section-header section-header--center">
+          <span class="text-overline">REAL-TIME SERVICE ESTIMATOR</span>
+          <h2>LIVE PEST TREATMENT COST CALCULATOR</h2>
+          <p class="lead">
+            Select your target infestation, building classification, and premise area to generate an instant preliminary cost range estimate in INR (₹).
+          </p>
+        </div>
+
+        <div style="background-color: var(--color-charcoal); color: var(--color-ivory); border: 2px solid var(--color-yellow); border-radius: var(--radius-sm); padding: var(--space-8); box-shadow: 0 16px 40px rgba(0,0,0,0.35);">
+          <div class="grid grid-cols-12 gap-8 items-center">
+            
+            <!-- Calculator Inputs (7 cols) -->
+            <div class="col-span-7">
+              <div class="grid grid-cols-2 gap-4" style="margin-bottom: var(--space-4);">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="calcPestType" class="form-label" style="color: var(--color-ivory); font-size: 0.8125rem;">Target Pest Category</label>
+                  <select id="calcPestType" class="form-select" style="background-color: #2A332E; border-color: var(--border-dark); color: var(--color-ivory);">
+                    <option value="termites" selected>Subterranean Termite Barrier</option>
+                    <option value="bed_bugs">Bed Bug Convective Thermal (50°C)</option>
+                    <option value="cockroaches">German Cockroach Micro-Gel</option>
+                    <option value="rodents">Commercial Rodent Exclusion</option>
+                    <option value="fumigation">Cargo Container &amp; Silo Fumigation</option>
+                    <option value="general">Whole-Property General Pest Shield</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="calcPremiseType" class="form-label" style="color: var(--color-ivory); font-size: 0.8125rem;">Premise Classification</label>
+                  <select id="calcPremiseType" class="form-select" style="background-color: #2A332E; border-color: var(--border-dark); color: var(--color-ivory);">
+                    <option value="apartment" selected>Apartment / Flat (1–3 BHK)</option>
+                    <option value="villa">Independent House / Villa Estate</option>
+                    <option value="commercial_office">Corporate Commercial Office</option>
+                    <option value="restaurant">Commercial Restaurant / Food Outlet</option>
+                    <option value="warehouse">Industrial Warehouse / Plant</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Square Footage Range Slider & Numeric Input -->
+              <div class="form-group" style="margin-bottom: var(--space-6);">
+                <div class="flex items-center justify-between" style="margin-bottom: 8px;">
+                  <label for="calcAreaRange" class="form-label" style="color: var(--color-ivory); font-size: 0.8125rem; margin: 0;">
+                    Premise Built-Up Area (Sq. Ft.)
+                  </label>
+                  <input type="number" id="calcAreaInput" value="1500" min="500" max="10000" step="50" style="width: 110px; background: #2A332E; border: 1px solid var(--border-dark); color: var(--color-yellow); font-family: var(--font-heading); font-size: 1.125rem; font-weight: 700; text-align: right; padding: 2px 8px; border-radius: var(--radius-sm);">
+                </div>
+                <input type="range" id="calcAreaRange" min="500" max="10000" step="50" value="1500" style="width: 100%; accent-color: var(--color-yellow); cursor: pointer;">
+                <div class="flex justify-between" style="font-size: 0.75rem; color: var(--text-on-dark-muted); margin-top: 4px;">
+                  <span>500 sq ft</span>
+                  <span>5,000 sq ft</span>
+                  <span>10,000+ sq ft</span>
+                </div>
+              </div>
+
+              <!-- Frequency Plan Selection -->
+              <div>
+                <label class="form-label" style="color: var(--color-ivory); font-size: 0.8125rem; margin-bottom: 8px;">Treatment Frequency &amp; Protection Tier</label>
+                <div class="selection-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+                  <label class="selection-tile card--dark" style="margin: 0; padding: var(--space-3);">
+                    <input type="radio" name="calc_plan" value="single" checked>
+                    <div style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700;">ONE-TIME</div>
+                    <div class="selection-tile__sub">Single Knockdown</div>
+                  </label>
+                  <label class="selection-tile card--dark" style="margin: 0; padding: var(--space-3);">
+                    <input type="radio" name="calc_plan" value="quarterly">
+                    <div style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700;">QUARTERLY</div>
+                    <div class="selection-tile__sub">4 Visits / Year</div>
+                  </label>
+                  <label class="selection-tile card--dark is-selected" style="margin: 0; padding: var(--space-3);">
+                    <input type="radio" name="calc_plan" value="annual">
+                    <div style="font-family: var(--font-heading); font-size: 1rem; font-weight: 700;">ANNUAL SHIELD</div>
+                    <div class="selection-tile__sub">365-Day Warranty</div>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Calculator Output Box (5 cols) -->
+            <div class="col-span-5" style="border-left: 2px solid var(--border-dark); padding-left: var(--space-6);">
+              <div style="background-color: #1A201C; border: 1.5px solid var(--color-yellow); border-radius: var(--radius-sm); padding: var(--space-6); text-align: center;">
+                <span class="badge badge-yellow" style="margin-bottom: 12px;">ESTIMATED INVESTMENT RANGE</span>
+                
+                <div id="calcEstimatedTotal" style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 900; color: var(--color-yellow); line-height: 1; margin-bottom: 8px;">
+                  ₹3,800 – ₹4,800*
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8125rem; color: var(--text-on-dark-muted); text-align: left; margin: 16px 0; border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); padding: 12px 0;">
+                  <div class="flex justify-between">
+                    <span>Estimated Duration:</span>
+                    <strong id="calcDuration" style="color: var(--color-ivory);">2.5 – 4.0 Hrs</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Warranty Umbrella:</span>
+                    <strong id="calcWarranty" style="color: var(--color-yellow);">365-Day Defendra Shield Guarantee</strong>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Regulatory Certification:</span>
+                    <strong style="color: var(--color-ivory);">IPCA Compliance Log</strong>
+                  </div>
+                </div>
+
+                <a href="inspection-booking.html" id="calcBookCta" class="btn btn-primary btn-full btn-lg">
+                  <i data-lucide="calendar-check" style="width: 18px; height: 18px;"></i>
+                  Book Site Inspection
+                </a>
+                
+                <div style="font-size: 0.6875rem; color: var(--text-on-dark-muted); margin-top: 10px;">
+                  *Sample estimate in INR (₹). Final proposal delivered after on-site acoustic moisture audit.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tiered Pricing Comparison Cards -->
+    <section class="site-section">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="text-overline">PROTECTION TIERS</span>
+          <h2>RECOMMENDED SERVICE AGREEMENT TIERS</h2>
+          <p class="lead">
+            Select the service tier that matches your property's infestation risk profile. All plans utilize odorless CIBRC registered chemistries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-4 gap-6">
+          
+          <!-- Plan 1: Single Knockdown -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 4px;">TARGETED KNOCKDOWN</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">One-time targeted colony intervention</p>
+            
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₹</span>1,499
+              <span class="pricing-card__period">/ one-time estimate*</span>
+            </div>
+
+            <div class="pricing-card__features">
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Initial Acoustic &amp; Moisture Audit</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Micro-Gel or Residual Chemical</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Harborage Crack Exclusion Seal</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>30-Day Follow-Up Warranty Window</span>
+              </div>
+            </div>
+
+            <a href="inspection-booking.html?plan=single" class="btn btn-outline-dark btn-full">
+              Request Single Audit
+            </a>
+          </div>
+
+          <!-- Plan 2: Quarterly Maintenance -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 4px;">QUARTERLY SHIELD</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">4 scheduled seasonal service visits</p>
+            
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₹</span>3,999
+              <span class="pricing-card__period">/ year estimate*</span>
+            </div>
+
+            <div class="pricing-card__features">
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>4 Scheduled Pre-Emptive Audits year</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Exterior Foundation Barrier Boost</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Free Mid-Term Callouts If Sighted</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Monsoon Season Vector Abatement</span>
+              </div>
+            </div>
+
+            <a href="inspection-booking.html?plan=quarterly" class="btn btn-outline-dark btn-full">
+              Request Quarterly Plan
+            </a>
+          </div>
+
+          <!-- Plan 3: 365-Day Annual Shield (Popular) -->
+          <div class="pricing-card pricing-card--popular">
+            <span class="pricing-card__badge">MOST POPULAR</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 4px;">365-DAY ANNUAL DEFENSE</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">6 scheduled visits + 100% zero-fee guarantee</p>
+            
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₹</span>7,499
+              <span class="pricing-card__period">/ year estimate*</span>
+            </div>
+
+            <div class="pricing-card__features">
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>6 Comprehensive Bi-Monthly</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span><strong>Defendra 365-Day Zero-Fee</strong></span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Multi-Species Defense</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Priority Emergency Dispatch &lt; 30</span>
+              </div>
+            </div>
+
+            <a href="inspection-booking.html?plan=annual" class="btn btn-primary btn-full">
+              Book Annual Shield
+            </a>
+          </div>
+
+          <!-- Plan 4: Commercial Contract -->
+          <div class="pricing-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 4px;">COMMERCIAL &amp; FUMIGATION</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Custom enterprise SLA contract</p>
+            
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">₹</span>CUSTOM
+              <span class="pricing-card__period">/ formal quotation</span>
+            </div>
+
+            <div class="pricing-card__features">
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>HACCP &amp; FSSAI Statutory</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Export Container Gas Treatment</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Dedicated Entomologist Key Account</span>
+              </div>
+              <div class="pricing-card__feature-item">
+                <i data-lucide="check" class="pricing-card__check" style="width: 16px; height: 16px; min-width: 16px;"></i>
+                <span>Digital IoT Pest Sensor Trap Network</span>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-outline-dark btn-full">
+              Request Commercial Audit
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Commercial Tier Comparison Matrix Table -->
+        <div style="margin-top: var(--space-12);">
+          <div class="section-header section-header--center">
+            <span class="text-overline">DETAILED SPECIFICATION MATRIX</span>
+            <h3 style="font-size: 1.75rem;">FEATURE &amp; SLA COMPARISON BY TIER</h3>
+            <p style="font-size: 0.9375rem; color: var(--text-muted);">
+              Review statutory compliance deliverables, emergency mobilization SLAs, and warranty coverages across each service tier.
+            </p>
+          </div>
+
+          <div class="table-responsive tier-compare-table">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th style="min-width: 220px;">Service &amp; Warranty Specification</th>
+                  <th>Targeted Knockdown</th>
+                  <th>Standard Shield</th>
+                  <th style="background-color: var(--color-yellow); color: var(--color-charcoal);">Annual Complete Shield</th>
+                  <th>Commercial Contract</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Estimated Starting Investment (INR)</td>
+                  <td>₹1,499*</td>
+                  <td>₹2,899*</td>
+                  <td><strong>₹4,999*</strong></td>
+                  <td>Custom Proposal</td>
+                </tr>
+                <tr>
+                  <td>Service Frequency</td>
+                  <td>1 Knockdown Treatment</td>
+                  <td>3 Seasonal Interventions</td>
+                  <td>6 Bi-Monthly Interventions</td>
+                  <td>Monthly / Custom IoT SLA</td>
+                </tr>
+                <tr>
+                  <td>Defendra Retreatment Warranty</td>
+                  <td>30-Day Re-Check</td>
+                  <td>90-Day Guarantee</td>
+                  <td><strong>365-Day Zero-Fee Shield</strong></td>
+                  <td>12-Month Enterprise SLA</td>
+                </tr>
+                <tr>
+                  <td>Pest Spectrum Covered</td>
+                  <td>Single Targeted Species</td>
+                  <td>Dual Species (Roach + Ant)</td>
+                  <td><strong>Multi-Species (Termite + Bug + Rodent)</strong></td>
+                  <td>Full Commercial Bio-Security</td>
+                </tr>
+                <tr>
+                  <td>Emergency Vehicle Dispatch SLA</td>
+                  <td>Standard (24–48 Hrs)</td>
+                  <td>Priority (12–24 Hrs)</td>
+                  <td><strong>Rapid Response (&lt; 2 Hrs)</strong></td>
+                  <td>24/7 Dedicated Line (&lt; 30 Mins)</td>
+                </tr>
+                <tr>
+                  <td>Chemical Registration Standard</td>
+                  <td>CIB&amp;RC Odorless</td>
+                  <td>CIB&amp;RC Food-Grade Gel</td>
+                  <td>CIB&amp;RC Low-Toxicity Micro-Gel</td>
+                  <td>HACCP / FSSAI Audited Chems</td>
+                </tr>
+                <tr>
+                  <td>Regulatory Compliance Dossier</td>
+                  <td>Digital Invoice</td>
+                  <td>Digital Inspection Log</td>
+                  <td>Full Entomologist Report</td>
+                  <td>ISO 9001:2015 &amp; IPCA Dossier</td>
+                </tr>
+                <tr>
+                  <td>Dedicated Key Account Entomologist</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Included</td>
+                  <td>Senior Assigned Specialist</td>
+                </tr>
+                <tr>
+                  <td>IoT Acoustic Telemetry Sensor Traps</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>Optional Add-On</td>
+                  <td>Included Traps &amp; Dashboard</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Tablet & mobile: tier-by-tier cards (table is hidden at these widths) -->
+          <div class="tier-compare" aria-label="Feature and SLA comparison by tier">
+              <article class="tier-compare__card">
+                <header class="tier-compare__head">
+                  <h4 class="tier-compare__title">Targeted Knockdown</h4>
+                </header>
+                <dl class="tier-compare__list">
+                <div class="tier-compare__row">
+                  <dt>Estimated Starting Investment (INR)</dt>
+                  <dd>₹1,499*</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Service Frequency</dt>
+                  <dd>1 Knockdown Treatment</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Defendra Retreatment Warranty</dt>
+                  <dd>30-Day Re-Check</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Pest Spectrum Covered</dt>
+                  <dd>Single Targeted Species</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Emergency Vehicle Dispatch SLA</dt>
+                  <dd>Standard (24–48 Hrs)</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Chemical Registration Standard</dt>
+                  <dd>CIB&amp;RC Odorless</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Regulatory Compliance Dossier</dt>
+                  <dd>Digital Invoice</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Dedicated Key Account Entomologist</dt>
+                  <dd>—</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>IoT Acoustic Telemetry Sensor Traps</dt>
+                  <dd>—</dd>
+                </div>
+                </dl>
+              </article>
+              <article class="tier-compare__card">
+                <header class="tier-compare__head">
+                  <h4 class="tier-compare__title">Standard Shield</h4>
+                </header>
+                <dl class="tier-compare__list">
+                <div class="tier-compare__row">
+                  <dt>Estimated Starting Investment (INR)</dt>
+                  <dd>₹2,899*</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Service Frequency</dt>
+                  <dd>3 Seasonal Interventions</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Defendra Retreatment Warranty</dt>
+                  <dd>90-Day Guarantee</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Pest Spectrum Covered</dt>
+                  <dd>Dual Species (Roach + Ant)</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Emergency Vehicle Dispatch SLA</dt>
+                  <dd>Priority (12–24 Hrs)</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Chemical Registration Standard</dt>
+                  <dd>CIB&amp;RC Food-Grade Gel</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Regulatory Compliance Dossier</dt>
+                  <dd>Digital Inspection Log</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Dedicated Key Account Entomologist</dt>
+                  <dd>—</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>IoT Acoustic Telemetry Sensor Traps</dt>
+                  <dd>—</dd>
+                </div>
+                </dl>
+              </article>
+              <article class="tier-compare__card tier-compare__card--featured">
+                <header class="tier-compare__head">
+                  <h4 class="tier-compare__title">Annual Complete Shield</h4><span class="tier-compare__badge">Most Popular</span>
+                </header>
+                <dl class="tier-compare__list">
+                <div class="tier-compare__row">
+                  <dt>Estimated Starting Investment (INR)</dt>
+                  <dd><strong>₹4,999*</strong></dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Service Frequency</dt>
+                  <dd>6 Bi-Monthly Interventions</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Defendra Retreatment Warranty</dt>
+                  <dd><strong>365-Day Zero-Fee Shield</strong></dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Pest Spectrum Covered</dt>
+                  <dd><strong>Multi-Species (Termite + Bug + Rodent)</strong></dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Emergency Vehicle Dispatch SLA</dt>
+                  <dd><strong>Rapid Response (&lt; 2 Hrs)</strong></dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Chemical Registration Standard</dt>
+                  <dd>CIB&amp;RC Low-Toxicity Micro-Gel</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Regulatory Compliance Dossier</dt>
+                  <dd>Full Entomologist Report</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Dedicated Key Account Entomologist</dt>
+                  <dd>Included</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>IoT Acoustic Telemetry Sensor Traps</dt>
+                  <dd>Optional Add-On</dd>
+                </div>
+                </dl>
+              </article>
+              <article class="tier-compare__card">
+                <header class="tier-compare__head">
+                  <h4 class="tier-compare__title">Commercial Contract</h4>
+                </header>
+                <dl class="tier-compare__list">
+                <div class="tier-compare__row">
+                  <dt>Estimated Starting Investment (INR)</dt>
+                  <dd>Custom Proposal</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Service Frequency</dt>
+                  <dd>Monthly / Custom IoT SLA</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Defendra Retreatment Warranty</dt>
+                  <dd>12-Month Enterprise SLA</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Pest Spectrum Covered</dt>
+                  <dd>Full Commercial Bio-Security</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Emergency Vehicle Dispatch SLA</dt>
+                  <dd>24/7 Dedicated Line (&lt; 30 Mins)</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Chemical Registration Standard</dt>
+                  <dd>HACCP / FSSAI Audited Chems</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Regulatory Compliance Dossier</dt>
+                  <dd>ISO 9001:2015 &amp; IPCA Dossier</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>Dedicated Key Account Entomologist</dt>
+                  <dd>Senior Assigned Specialist</dd>
+                </div>
+                <div class="tier-compare__row">
+                  <dt>IoT Acoustic Telemetry Sensor Traps</dt>
+                  <dd>Included Traps &amp; Dashboard</dd>
+                </div>
+                </dl>
+              </article>
+          </div>
+        </div>
+
+        <div class="template-disclaimer-box" style="margin-top: var(--space-8);">
+          <i data-lucide="info" class="disclaimer-icon" style="width: 18px; height: 18px; min-width: 18px;"></i>
+          <span>
+            *Static Template Honesty: Prices quoted in Indian Rupees (₹) are sample estimated ranges for informational planning. Formal contracts are drawn based on premise square footage, structural layout, and baseline acoustic infestation audit.
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid grid-cols-12 gap-8">
+        
+        <!-- Col 1: Identity & Regulatory Credentials -->
+        <div class="col-span-4">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-4);">
+            <span class="brand-logo__mark"><img src="assets/images/brand/defendra-mark.svg" alt="" width="30" height="30"></span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">DEFENDRA</span>
+              <span class="brand-logo__tagline" style="color: var(--color-yellow);">PEST CONTROL &amp; FUMIGATION</span>
+            </span>
+          </a>
+          <p style="font-size: 0.875rem; color: var(--text-on-dark-muted); margin-bottom: var(--space-4);">
+            Commercial biological exclusion, termite barriers, bed bug thermal remediation, and port container fumigation services. Serving 6 major U.S. metropolitan economic corridors.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.8125rem; color: var(--text-on-dark-muted);">
+            <div><strong>IPCA Membership ID:</strong> IPCA-IND-44921</div>
+            <div><strong>CIBRC License No:</strong> CIBRC/COMM/2021/8834</div>
+            <div><strong>ISO Accreditation:</strong> ISO 9001:2015 Structural Safety</div>
+          </div>
+        </div>
+
+        <!-- Col 2: Services Directory -->
+        <div class="col-span-2">
+          <h4 style="color: var(--color-yellow); margin-bottom: var(--space-4); font-size: 1.125rem;">SERVICES</h4>
+          <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem;">
+            <li><a href="service-details.html?service=termites">Termite Drill-Fill-Seal</a></li>
+            <li><a href="service-details.html?service=bedbugs">Bed Bug Convective Heat</a></li>
+            <li><a href="service-details.html?service=cockroaches">German Cockroach Gel</a></li>
+            <li><a href="service-details.html?service=rodents">Commercial Rodent Exclusion</a></li>
+            <li><a href="service-details.html?service=fumigation">Silo &amp; Cargo Fumigation</a></li>
+            <li><a href="services.html">Comprehensive Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigation & Tools -->
+        <div class="col-span-2">
+          <h4 style="color: var(--color-yellow); margin-bottom: var(--space-4); font-size: 1.125rem;">NAVIGATE</h4>
+          <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.875rem;">
+            <li><a href="about.html">About Defendra</a></li>
+            <li><a href="pricing.html">Cost Range Calculator</a></li>
+            <li><a href="areas-served.html">Service Hubs &amp; Radii</a></li>
+            <li><a href="inspection-booking.html">Request Inspection</a></li>
+            <li><a href="faq.html">FAQ &amp; Protocols</a></li>
+            <li><a href="blog.html">Entomological Insights</a></li>
+            <li><a href="contact.html">Branch Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Emergency Desk -->
+        <div class="col-span-4">
+          <h4 style="color: var(--color-yellow); margin-bottom: var(--space-4); font-size: 1.125rem;">EMERGENCY DESK</h4>
+          <p style="font-size: 0.875rem; color: var(--text-on-dark-muted); margin-bottom: var(--space-3);">
+            Call toll-free for immediate vehicle mobilization:
+          </p>
+          <a href="tel:18004197825" class="btn btn-primary btn-full">
+            <i data-lucide="phone-call" style="width: 18px; height: 18px;"></i> 1800-419-7825
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Defendra Pest Control &amp; Fumigation Services Ltd. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="faq.html">Guarantee Terms</a>
+          <a href="sitemap.xml">XML Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/site-motion.js"></script>
+  <script src="assets/js/calculator.js"></script>
+</body>
+</html>

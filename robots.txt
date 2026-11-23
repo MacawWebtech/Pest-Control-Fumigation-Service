@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Disallow utility and auth states from indexing
+Disallow: /inspection-confirmation.html
+Disallow: /login.html
+Disallow: /register.html
+Disallow: /forgot-password.html
+Disallow: /404.html
+Disallow: /coming-soon.html
+Disallow: /maintenance.html
+
+# Sitemap reference
+Sitemap: https://defendra-pest.com/sitemap.xml
