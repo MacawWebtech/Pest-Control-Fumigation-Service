@@ -1,0 +1,293 @@
+/* ==========================================================================
+   DEFENDRA - PEST CONTROL & FUMIGATION SERVICE
+   Dashboard Architecture Stylesheet: dashboard.css
+   Customer & Operational Portals, KPI Metric Cards, Status Pills, Tables
+   Brand Palette: Charcoal (#202723) | Safety Yellow (#E5C747) | Warm Ivory (#F4F1E8)
+   ========================================================================== */
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  width: 100%;
+}
+
+/* Sidebar Component */
+.dashboard-sidebar {
+  width: 270px;
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+  border-right: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  transition: transform 0.3s var(--ease-expo);
+  overflow-y: auto;
+}
+
+[dir="rtl"] .dashboard-sidebar {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid var(--border-dark);
+}
+
+.sidebar-header {
+  padding: var(--space-6) var(--space-5);
+  border-bottom: 1px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-ivory);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  background-color: var(--color-yellow);
+  color: var(--color-charcoal);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-nav {
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.sidebar-section-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-on-dark-muted);
+  padding: var(--space-4) var(--space-3) var(--space-2) var(--space-3);
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px 14px;
+  color: var(--text-on-dark-muted);
+  font-weight: 600;
+  font-size: 0.925rem;
+  border-radius: var(--radius-sm);
+  transition: transform 0.25s var(--ease-expo), background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  background-color: #2A332E;
+  color: var(--color-yellow);
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .sidebar-link:hover {
+  transform: translateX(-4px);
+}
+
+.sidebar-link.active {
+  background-color: var(--color-yellow);
+  color: var(--color-charcoal) !important;
+  font-weight: 800;
+}
+
+.sidebar-link.active .sidebar-icon {
+  color: var(--color-charcoal);
+}
+
+.sidebar-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.sidebar-badge-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background: var(--bg-dark-card);
+  color: var(--color-ivory);
+}
+
+.sidebar-link.active .sidebar-badge-count {
+  background: var(--color-charcoal);
+  color: var(--color-yellow);
+}
+
+/* KPI Card Grid with Equal Height */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+  width: 100%;
+  align-items: stretch;
+}
+
+.kpi-card {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  transition: transform 0.3s var(--ease-expo), box-shadow 0.3s var(--ease-expo), border-color 0.25s ease;
+  position: relative;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-yellow);
+  box-shadow: var(--shadow-md);
+}
+
+.kpi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.kpi-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.kpi-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(229, 199, 71, 0.15);
+  color: var(--color-charcoal);
+  border-radius: var(--radius-sm);
+}
+
+.kpi-value {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-2);
+}
+
+.kpi-footer {
+  margin-top: auto;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Dashboard Status Indicators */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.status-active, .status-cleared {
+  background-color: var(--color-yellow);
+  color: var(--color-charcoal);
+}
+
+.status-scheduled, .status-pending {
+  background-color: var(--bg-surface);
+  color: var(--color-charcoal);
+  border: 1.5px solid var(--color-charcoal);
+}
+
+.status-completed {
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.status-caution {
+  background-color: rgba(229, 199, 71, 0.2);
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-yellow);
+}
+
+/* Dashboard Table */
+.dashboard-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface-elevated);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+  min-width: 640px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.dashboard-table th {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.dashboard-table tbody tr:hover td {
+  background-color: rgba(229, 199, 71, 0.08);
+}

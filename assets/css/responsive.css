@@ -1,0 +1,208 @@
+/* ==========================================================================
+   DEFENDRA - PEST CONTROL & FUMIGATION SERVICE
+   Responsive Breakpoints Stylesheet
+   Strict Full-Width & Standardized Gutter System:
+   - Desktop & Tablet (>=640px): Exact 30px left/right padding
+   - Mobile (<640px): Exact 16px left/right padding
+   ========================================================================== */
+
+/* --- 1. TABLET & BELOW (<= 1024PX) --- */
+@media (max-width: 1024px) {
+  :root {
+    --container-px: 30px;
+    --section-py: 64px;
+    --section-py-lg: 80px;
+    --header-height: 74px;
+  }
+
+  /* Nav menu switches to mobile drawer trigger */
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .header-actions .btn-primary {
+    display: none;
+  }
+
+  /* Grid Adapters */
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .col-span-10, .col-span-9, .col-span-8, .col-span-7, .col-span-6, .col-span-5, .col-span-4, .col-span-3, .col-span-2 {
+    grid-column: span 12 / span 12;
+  }
+
+
+  /* Footer link columns sit side by side instead of stacking full width */
+  .site-footer .grid > .col-span-2 {
+    grid-column: span 6 / span 6;
+  }
+}
+
+/* --- 2. MOBILE LANDSCAPE & PHABLET (640PX - 1024PX) --- */
+@media (min-width: 640px) and (max-width: 1024px) {
+  :root {
+    --container-px: 30px;
+  }
+
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
+  .grid-tablet-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* --- 3. MOBILE SMARTPHONES (< 640PX) --- */
+@media (max-width: 639px) {
+  :root {
+    --container-px: 16px; /* Exact 16px mobile gutter */
+    --section-py: 48px;
+    --section-py-lg: 60px;
+    --header-height: 68px;
+  }
+
+  /* Mobile Gutters */
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  /* Typography downscaling for small devices */
+  h1, .h1 {
+    font-size: 2.25rem;
+    line-height: 1.05;
+  }
+  h2, .h2 {
+    font-size: 1.75rem;
+    line-height: 1.1;
+  }
+  h3, .h3 {
+    font-size: 1.35rem;
+  }
+
+  /* All Multi-column grids become single column on mobile */
+  .grid-cols-4,
+  .grid-cols-3,
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .selection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* 12-col layout grids: the 11 column gaps (11 x 32px) were wider than a phone
+     screen and pushed content sideways. Collapse the column gap on mobile; rows keep spacing. */
+  .grid.grid-cols-12 {
+    column-gap: 0;
+  }
+  .site-footer .grid.grid-cols-12 {
+    column-gap: var(--space-4);
+  }
+
+
+  /* Wizard Mobile Nodes */
+  .wizard-step-node {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9375rem;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-3);
+  }
+
+  /* Buttons on mobile */
+  .btn-mobile-full {
+    width: 100%;
+  }
+
+  .hero-action-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-action-group .btn {
+    width: 100%;
+  }
+}
+
+/* --- 4. LARGE DESKTOP & ABOVE (>= 640PX) --- */
+@media (min-width: 640px) {
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --container-px: 30px;
+    --section-py: 88px;
+    --section-py-lg: 112px;
+  }
+}
+
+/* --- Tablet: a lone last card in a 3/4-column grid sits centred, never stranded on the left --- */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid-cols-3 > *,
+  .grid-cols-4 > * {
+    grid-column: span 2;
+  }
+  .grid-cols-3 > :last-child:nth-child(odd),
+  .grid-cols-4 > :last-child:nth-child(odd) {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* --- Mobile: long button labels wrap and stay centred instead of clipping --- */
+@media (max-width: 639px) {
+  .btn {
+    white-space: normal;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .btn-lg,
+  .btn-full {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 1.0625rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .btn > svg,
+  .btn > i[data-lucide] {
+    flex-shrink: 0;
+  }
+}

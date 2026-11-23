@@ -1,0 +1,95 @@
+/* ==========================================================================
+   DEFENDRA - PEST CONTROL & FUMIGATION SERVICE
+   RTL (Right-To-Left) Mirroring Stylesheet
+   Applied when <html dir="rtl">
+   Supports Arabic, Hebrew, and RTL locales
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Nav & Dropdown Mirroring
+   Dropdown position, the active bar and the active underline now use logical
+   properties in components.css, so they mirror automatically. These rules only
+   make the RTL active state explicit and keep it identical in both themes. */
+[dir="rtl"] .nav-dropdown {
+  left: auto;
+  right: 0;
+}
+[dir="rtl"] .nav-dropdown__link {
+  border-left: 0;
+  border-right: 3px solid transparent;
+  text-align: right;
+}
+[dir="rtl"] .nav-dropdown__link:hover,
+[dir="rtl"] .nav-dropdown__link.active {
+  border-right-color: var(--color-yellow);
+  border-left-color: transparent;
+}
+[dir="rtl"] .nav-link.active::after {
+  left: 0;
+  right: 0;
+}
+[dir="rtl"] .mobile-nav-link {
+  text-align: right;
+}
+[dir="rtl"] .mobile-nav-link.active {
+  box-shadow: inset -3px 0 0 var(--color-yellow);
+}
+
+/* Mobile Drawer Mirroring */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 2px solid var(--color-yellow);
+  transform: translateX(-100%);
+}
+[dir="rtl"] .mobile-drawer.is-active {
+  transform: translateX(0);
+}
+
+/* Review Cards & Borders */
+[dir="rtl"] .review-card {
+  border-left: 1px solid var(--border-color);
+  border-right: 4px solid var(--color-yellow);
+}
+
+/* Badges & Overlines */
+[dir="rtl"] .text-overline::before {
+  margin-left: var(--space-2);
+  margin-right: 0;
+}
+
+[dir="rtl"] .pricing-card__badge {
+  right: auto;
+  left: var(--space-6);
+}
+
+/* Accordion Trigger */
+[dir="rtl"] .accordion-trigger {
+  text-align: right;
+}
+
+/* Wizard Indicators */
+[dir="rtl"] .wizard-progress__bar {
+  left: auto;
+  right: 0;
+}
+
+/* Icons & Margins */
+/* Only directional icons are mirrored (arrows / chevrons); symmetric icons
+   such as the nav dropdown chevron-down and check marks stay untouched. */
+[dir="rtl"] .btn svg.lucide-arrow-right,
+[dir="rtl"] .btn svg.lucide-arrow-left,
+[dir="rtl"] .btn svg.lucide-chevron-right,
+[dir="rtl"] .btn svg.lucide-chevron-left {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .modal-close {
+  right: auto;
+  left: var(--space-4);
+}

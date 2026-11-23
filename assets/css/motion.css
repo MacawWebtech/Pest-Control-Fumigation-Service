@@ -1,0 +1,341 @@
+/* ==========================================================================
+   DEFENDRA - PEST CONTROL & FUMIGATION SERVICE
+   Premium Motion & Micro-Interaction Layer: motion.css
+   GPU-Accelerated (transform / opacity), 60fps, WCAG Reduced-Motion Compliant
+   Brand Palette: Charcoal (#202723) | Safety Yellow (#E5C747) | Warm Ivory (#F4F1E8)
+   ========================================================================== */
+
+:root {
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ---- 1. Page Enter Transition ---- */
+@keyframes mPageIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+body {
+  animation: mPageIn 0.6s var(--ease-smooth) both;
+}
+
+/* ---- 2. Scroll Progress Bar (Top-Edge Yellow Indicator) ---- */
+.m-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-yellow) 0%, #F9F3D3 100%);
+  box-shadow: 0 0 14px rgba(229, 199, 71, 0.65);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 2100;
+  pointer-events: none;
+  will-change: transform;
+}
+
+[dir="rtl"] .m-progress {
+  transform-origin: 100% 50%;
+}
+
+/* ---- 3. Smart Header Dynamics ---- */
+.site-header {
+  transition: top var(--transition-base),
+              transform 0.4s var(--ease-expo),
+              box-shadow 0.35s ease,
+              background-color 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.site-header.m-hide {
+  transform: translateY(-100%);
+}
+
+.nav-link {
+  transition: transform 0.25s var(--ease-expo), color 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+/* ---- 4. Hero Choreography & Split-Text Masks ---- */
+@keyframes mRise {
+  from { opacity: 0; transform: translate3d(0, 32px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes mWordUp {
+  from { transform: translate3d(0, 110%, 0) rotate(2deg); opacity: 0; }
+  to   { transform: translate3d(0, 0, 0) rotate(0); opacity: 1; }
+}
+
+@keyframes mFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes mGlowPulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%      { opacity: 0.85; transform: scale(1.06); }
+}
+
+@keyframes mShimmer {
+  0%   { transform: translateX(-120%) skewX(-18deg); }
+  60%, 100% { transform: translateX(260%) skewX(-18deg); }
+}
+
+.m-hero-item {
+  opacity: 0;
+  animation: mRise 0.9s var(--ease-expo) forwards;
+  animation-delay: calc(var(--d, 0) * 100ms + 150ms);
+}
+
+/* Split-Text Heading Masks */
+.m-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.m-word-inner {
+  display: inline-block;
+  transform: translate3d(0, 110%, 0) rotate(2deg);
+  transform-origin: 0 100%;
+  will-change: transform, opacity;
+}
+
+.m-split.m-in .m-word-inner {
+  animation: mWordUp 0.85s var(--ease-expo) forwards;
+  animation-delay: calc(var(--w, 0) * 45ms + var(--base, 0ms));
+}
+
+/* Hero Artwork: Float & Ambient Glow */
+.m-hero-art {
+  position: relative;
+  perspective: 1100px;
+}
+
+.m-hero-art > img,
+.m-hero-art > svg {
+  transform: translate3d(var(--px, 0px), var(--py, 0px), 0) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.25s ease-out;
+  animation: mFloat 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.m-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 10% 8%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(229, 199, 71, 0.28), transparent 70%);
+  filter: blur(28px);
+  animation: mGlowPulse 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Cursor-Following Yellow Ambient Aura */
+.m-hero-host {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.m-hero-aura {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 520px;
+  height: 520px;
+  margin: -260px 0 0 -260px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(229, 199, 71, 0.16), transparent 70%);
+  transform: translate3d(var(--ax, 50vw), var(--ay, 30%), 0);
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+.m-hero-host > .container,
+.m-hero-host > .container-fluid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Badge Shimmer Sweep */
+.m-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.m-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(244, 241, 232, 0.55), transparent);
+  animation: mShimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ---- 5. Auto-Staggered Grid Item Reveals ---- */
+.m-item {
+  opacity: 0;
+  transform: translate3d(0, 36px, 0) scale(0.98);
+  transition: opacity 0.8s var(--ease-expo), transform 0.8s var(--ease-expo) !important;
+}
+
+.m-item.m-in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  transition-delay: calc(var(--i, 0) * 80ms) !important;
+}
+
+/* Table Row Entrances */
+@keyframes mRowIn {
+  from { opacity: 0; transform: translate3d(-14px, 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.pricing-table tbody tr.m-row,
+.dashboard-table tbody tr.m-row {
+  opacity: 0;
+  animation: mRowIn 0.5s var(--ease-expo) forwards;
+  animation-delay: calc(var(--i, 0) * 50ms + 150ms);
+}
+
+[dir="rtl"] .pricing-table tbody tr.m-row,
+[dir="rtl"] .dashboard-table tbody tr.m-row {
+  animation-name: mRowInRtl;
+}
+
+@keyframes mRowInRtl {
+  from { opacity: 0; transform: translate3d(14px, 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* ---- 6. Cards: 3D Tilt, Cursor Spotlight & Hover Elevation ---- */
+.m-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.m-card.m-tilting {
+  transition: transform 0.12s ease-out, box-shadow 0.35s var(--ease-expo), border-color 0.25s ease !important;
+}
+
+.m-card:not(.m-tilting) {
+  transition: transform 0.5s var(--ease-expo), box-shadow 0.35s var(--ease-expo), border-color 0.25s ease;
+}
+
+.m-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(229, 199, 71, 0.18), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.m-card:hover > .m-glow {
+  opacity: 1;
+}
+
+[data-theme="dark"] .m-glow {
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(229, 199, 71, 0.14), transparent 60%);
+}
+
+/* Image Slow Zoom on Card Hover */
+.service-card__media,
+.service-card-media,
+.card__media {
+  overflow: hidden;
+}
+
+.service-card__media img,
+.service-card-media img,
+.card__media img {
+  transition: transform 0.7s var(--ease-expo);
+}
+
+.service-card:hover .service-card__media img,
+.service-card:hover .service-card-media img,
+.card:hover .card__media img {
+  transform: scale(1.06);
+}
+
+/* ---- 7. Number Counters ---- */
+.m-count {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+/* ---- 8. View Transitions Theme Switch Reveal ---- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+
+html.m-theme-fade *,
+html.m-theme-fade *::before,
+html.m-theme-fade *::after {
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease,
+              fill 0.45s ease, stroke 0.45s ease, box-shadow 0.45s ease !important;
+}
+
+/* ---- 9. Accessibility: Reduced Motion Isolation ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .m-item,
+  .m-hero-item,
+  .m-word-inner,
+  .pricing-table tbody tr.m-row,
+  .dashboard-table tbody tr.m-row {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .m-progress,
+  .m-hero-aura,
+  .m-glow {
+    display: none !important;
+  }
+}
+
+/* Small screens / non-hover pointers: keep performance light */
+@media (hover: none), (max-width: 767px) {
+  .m-hero-aura,
+  .m-glow {
+    display: none;
+  }
+
+  .m-hero-art > img,
+  .m-hero-art > svg {
+    animation-duration: 8s;
+  }
+}

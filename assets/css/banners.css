@@ -1,0 +1,105 @@
+/* ==========================================================================
+   DEFENDRA - BANNER & PAGE BACKGROUND IMAGES  (JPG)
+   --------------------------------------------------------------------------
+   HOW TO CHANGE AN IMAGE
+   1. Save your photo as a .jpg (recommended 1920 x 800 px, under 400 KB).
+   2. Upload it to:   assets/images/banners/
+   3. Use the SAME file name as listed below (or edit the path in this file).
+   Paths are relative to this CSS file (assets/css/), hence "../images/...".
+   ========================================================================== */
+
+:root {
+  /* ---- Home pages ---- */
+  --banner-home-1:            url('../images/banners/home-1.jpg');             /* index.html          */
+  --banner-home-2:            url('../images/banners/home-2.jpg');             /* index-2.html        */
+
+  /* ---- Inner page banners ---- */
+  --banner-about:             url('../images/banners/about.jpg');              /* about.html          */
+  --banner-services:          url('../images/banners/services.jpg');           /* services.html       */
+  --banner-service-details:   url('../images/banners/service-details.jpg');    /* service-details.html */
+  --banner-areas-served:      url('../images/banners/areas-served.jpg');       /* areas-served.html   */
+  --banner-pricing:           url('../images/banners/pricing.jpg');            /* pricing.html        */
+  --banner-blog:              url('../images/banners/blog.jpg');               /* blog.html           */
+  --banner-blog-details:      url('../images/banners/blog-details.jpg');       /* blog-details.html   */
+  --banner-contact:           url('../images/banners/contact.jpg');            /* contact.html        */
+  --banner-faq:               url('../images/banners/faq.jpg');                /* faq.html            */
+  --banner-inspection-booking:url('../images/banners/inspection-booking.jpg'); /* inspection-booking.html */
+
+  /* ---- Utility page backgrounds ---- */
+  --banner-auth:              url('../images/banners/auth-bg.jpg');            /* login / register / forgot-password */
+  --banner-404:               url('../images/banners/error-404.jpg');          /* 404.html            */
+  --banner-coming-soon:       url('../images/banners/coming-soon.jpg');        /* coming-soon.html    */
+  --banner-maintenance:       url('../images/banners/maintenance.jpg');        /* maintenance.html    */
+  --banner-confirmation:      url('../images/banners/inspection-confirmation.jpg'); /* inspection-confirmation.html */
+
+  /* Overlay strength on inner banners (0 = photo only, 1 = solid colour) */
+  --banner-overlay: 0.74;
+}
+
+/* --------------------------------------------------------------------------
+   Shared behaviour: photo + dark overlay so headings stay readable.
+   Background colour from the theme stays underneath as a fallback.
+   -------------------------------------------------------------------------- */
+[class*="banner--"] {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Inner page banners (dark title bars) */
+.banner--about,
+.banner--services,
+.banner--service-details,
+.banner--areas-served,
+.banner--pricing,
+.banner--blog,
+.banner--blog-details,
+.banner--contact,
+.banner--faq,
+.banner--inspection-booking {
+  --banner-tint: linear-gradient(rgba(21, 26, 23, var(--banner-overlay)), rgba(21, 26, 23, var(--banner-overlay)));
+}
+.banner--about              { background-image: var(--banner-tint), var(--banner-about); }
+.banner--services           { background-image: var(--banner-tint), var(--banner-services); }
+.banner--service-details    { background-image: var(--banner-tint), var(--banner-service-details); }
+.banner--areas-served       { background-image: var(--banner-tint), var(--banner-areas-served); }
+.banner--pricing            { background-image: var(--banner-tint), var(--banner-pricing); }
+.banner--blog               { background-image: var(--banner-tint), var(--banner-blog); }
+.banner--blog-details       { background-image: var(--banner-tint), var(--banner-blog-details); }
+.banner--contact            { background-image: var(--banner-tint), var(--banner-contact); }
+.banner--faq                { background-image: var(--banner-tint), var(--banner-faq); }
+.banner--inspection-booking { background-image: var(--banner-tint), var(--banner-inspection-booking); }
+
+/* Home 1: photo sits under the existing dark gradient */
+.banner--home-1 .hx-hero__bg {
+  background:
+    linear-gradient(100deg, rgba(21, 26, 23, 0.94) 0%, rgba(21, 26, 23, 0.82) 48%, rgba(21, 26, 23, 0.5) 100%),
+    var(--banner-home-1) center / cover no-repeat,
+    #151A17;
+}
+
+/* Home 2: photo fills the hero behind the floating quote card */
+.banner--home-2 .tx-hero__media {
+  background: var(--banner-home-2) right center / cover no-repeat, var(--bg-dark);
+}
+
+/* Utility pages: light wash over the photo so forms/text stay readable */
+.banner--auth,
+.banner--404,
+.banner--coming-soon,
+.banner--maintenance,
+.banner--confirmation {
+  --banner-wash: linear-gradient(rgba(244, 241, 232, 0.9), rgba(244, 241, 232, 0.9));
+}
+[data-theme="dark"] .banner--auth,
+[data-theme="dark"] .banner--404,
+[data-theme="dark"] .banner--coming-soon,
+[data-theme="dark"] .banner--maintenance,
+[data-theme="dark"] .banner--confirmation {
+  --banner-wash: linear-gradient(rgba(26, 32, 28, 0.92), rgba(26, 32, 28, 0.92));
+}
+.banner--auth         { background-image: var(--banner-wash), var(--banner-auth); }
+.banner--404          { background-image: var(--banner-wash), var(--banner-404); }
+.banner--coming-soon  { background-image: var(--banner-wash), var(--banner-coming-soon); }
+.banner--maintenance  { background-image: var(--banner-wash), var(--banner-maintenance); }
+.banner--confirmation { background-image: var(--banner-wash), var(--banner-confirmation); }

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80" fill="none">
+  <rect width="64" height="64" x="8" y="8" rx="4" fill="#E5C747"/>
+  <g transform="translate(8 8)">
+    <path d="M32 6 11 14v15c0 13 9 23 21 27 12-4 21-14 21-27V14L32 6z" fill="#202723"/>
+    <path d="M25 22h8c7 0 11 4.200 11 10s-4 10-11 10h-8V22z" fill="#E5C747"/>
+    <path d="M30 27h3c3.500 0 5.500 2 5.500 5S36.500 37 33 37h-3V27z" fill="#202723"/>
+  </g>
+  <text x="88" y="46" fill="#202723" font-family="'Barlow Condensed', sans-serif" font-size="38" font-weight="800" letter-spacing="2">DEFENDRA</text>
+  <text x="89" y="64" fill="#202723" fill-opacity="0.7" font-family="'Inter', sans-serif" font-size="10" font-weight="600" letter-spacing="2.500">PEST CONTROL &amp; FUMIGATION</text>
+</svg>

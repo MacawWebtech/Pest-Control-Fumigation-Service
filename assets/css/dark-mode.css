@@ -1,0 +1,358 @@
+/* ==========================================================================
+   DEFENDRA - PEST CONTROL & FUMIGATION SERVICE
+   Dark Theme Stylesheet
+   Strict 3-Color Palette: Charcoal (#202723), Safety Yellow (#E5C747), Warm Ivory (#F4F1E8)
+   Applied via `[data-theme="dark"]` attribute on <html> element
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Tonal shifts using strictly Charcoal, Yellow, and Ivory */
+  --bg-body: #1A201C;
+  --bg-surface: #232B26;
+  --bg-surface-elevated: #2C3530;
+  --bg-dark: #151A17;
+  --bg-dark-surface: #1E2521;
+  --bg-dark-card: #27302A;
+  --bg-dark-highlight: #333E37;
+  
+  --bg-accent-subtle: rgba(229, 199, 71, 0.12);
+  --bg-accent-glow: rgba(229, 199, 71, 0.25);
+  --bg-charcoal-subtle: rgba(244, 241, 232, 0.08);
+
+  --text-main: #F4F1E8;
+  --text-muted: rgba(244, 241, 232, 0.75);
+  --text-subtle: rgba(244, 241, 232, 0.50);
+  --text-on-dark: #F4F1E8;
+  --text-on-dark-muted: rgba(244, 241, 232, 0.75);
+  --text-on-yellow: #202723;
+
+  --border-color: rgba(244, 241, 232, 0.16);
+  --border-dark: rgba(244, 241, 232, 0.20);
+  --border-strong: rgba(244, 241, 232, 0.35);
+  --border-accent: #E5C747;
+  --border-accent-subtle: rgba(229, 199, 71, 0.35);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings in Dark Mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .font-heading {
+  color: #F4F1E8;
+}
+
+[data-theme="dark"] .text-overline {
+  color: #E5C747;
+}
+
+/* Section overrides */
+[data-theme="dark"] .site-section {
+  background-color: var(--bg-body);
+}
+
+[data-theme="dark"] .site-section--surface {
+  background-color: var(--bg-surface);
+}
+
+/* Cards & Components in Dark Mode */
+[data-theme="dark"] .card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .feature-box,
+[data-theme="dark"] .review-card,
+[data-theme="dark"] .accordion-item {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .pricing-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+[data-theme="dark"] .pricing-card--popular {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--color-yellow);
+}
+[data-theme="dark"] .pricing-card__price {
+  color: #F4F1E8;
+}
+
+[data-theme="dark"] .accordion-trigger {
+  color: #F4F1E8;
+}
+[data-theme="dark"] .accordion-trigger:hover {
+  background-color: rgba(229, 199, 71, 0.08);
+}
+[data-theme="dark"] .accordion-trigger__icon {
+  background-color: rgba(244, 241, 232, 0.1);
+  color: #F4F1E8;
+}
+
+/* Form inputs in Dark Mode */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea {
+  background-color: var(--bg-surface-elevated);
+  color: #F4F1E8;
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-textarea:focus {
+  border-color: var(--color-yellow);
+  box-shadow: 0 0 0 3px rgba(229, 199, 71, 0.3);
+}
+
+[data-theme="dark"] .form-label {
+  color: #F4F1E8;
+}
+
+[data-theme="dark"] .selection-tile {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+  color: #F4F1E8;
+}
+
+[data-theme="dark"] .btn-outline-dark {
+  color: #F4F1E8;
+  border-color: rgba(244, 241, 232, 0.4);
+}
+[data-theme="dark"] .btn-outline-dark:hover {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: #202723;
+}
+
+[data-theme="dark"] .tech-tag {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--border-color);
+  color: #F4F1E8;
+}
+
+[data-theme="dark"] .pest-tag {
+  background-color: rgba(244, 241, 232, 0.12);
+  color: #F4F1E8;
+}
+
+[data-theme="dark"] .modal-dialog {
+  background-color: var(--bg-surface);
+}
+
+[data-theme="dark"] .wizard-step-node {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+}
+
+/* --- Dark mode: icons + text that were hard-coded charcoal --- */
+[data-theme="dark"] i[data-lucide][style*="--color-charcoal"],
+[data-theme="dark"] svg.lucide[style*="--color-charcoal"],
+[data-theme="dark"] .pricing-card__check,
+[data-theme="dark"] .template-disclaimer-box svg {
+  color: var(--color-yellow) !important;
+}
+[data-theme="dark"] .template-disclaimer-box {
+  color: var(--color-ivory);
+  border-left-color: var(--color-yellow);
+}
+[data-theme="dark"] .pricing-table td:first-child {
+  color: var(--color-ivory);
+}
+[data-theme="dark"] .tier-compare__card--featured .tier-compare__head,
+[data-theme="dark"] .tier-compare__card--featured .tier-compare__title {
+  color: var(--color-charcoal);
+}
+[data-theme="dark"] .selection-tile.card--dark {
+  background-color: #2A332E;
+  border-color: var(--border-dark);
+  color: var(--color-ivory);
+}
+[data-theme="dark"] .selection-tile.card--dark.is-selected,
+[data-theme="dark"] .selection-tile.card--dark:has(input:checked) {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-charcoal);
+}
+
+/* ==========================================================================
+   DARK MODE BUTTON FIXES (tablet + mobile + yellow bands)
+   ========================================================================== */
+
+/* 1. Buttons that sit on a yellow band must keep charcoal-on-yellow contrast
+      in dark mode. The global dark rules turned outline-dark text ivory
+      (unreadable on yellow) and made its hover fill the same yellow as the
+      band, so the button's edge vanished. */
+html[data-theme="dark"] .ab-cta .btn-dark,
+html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-dark {
+  background-color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+html[data-theme="dark"] .ab-cta .btn-outline-dark,
+html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-outline-dark {
+  background-color: transparent;
+  border-color: var(--color-charcoal);
+  color: var(--color-charcoal);
+}
+html[data-theme="dark"] .ab-cta .btn-dark:hover,
+html[data-theme="dark"] .ab-cta .btn-outline-dark:hover,
+html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-dark:hover,
+html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-outline-dark:hover {
+  background-color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+  color: var(--color-yellow);
+}
+
+/* 2. Touch screens (phones, tablets) have no real hover: the hover style
+      sticks after a tap. Hold every button at its resting look there, and
+      leave press feedback to :active. */
+@media (hover: none) {
+  .btn:hover { transform: none; }
+
+  .btn-primary:hover {
+    background-color: var(--color-yellow);
+    border-color: var(--color-yellow);
+    color: var(--color-charcoal);
+    box-shadow: 0 2px 8px rgba(229, 199, 71, 0.25);
+  }
+  .btn-primary:active { background-color: #D4B53B; border-color: #D4B53B; }
+
+  .btn-outline-light:hover {
+    background-color: transparent;
+    border-color: rgba(244, 241, 232, 0.35);
+    color: var(--color-ivory);
+  }
+  .btn-outline-light:active { border-color: var(--color-yellow); color: var(--color-yellow); }
+
+  .btn-dark:hover {
+    background-color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    color: var(--color-ivory);
+  }
+  .btn-dark:active { color: var(--color-yellow); }
+
+  .btn-outline-dark:hover {
+    background-color: transparent;
+    border-color: var(--color-charcoal);
+    color: var(--color-charcoal);
+  }
+  [data-theme="dark"] .btn-outline-dark:hover {
+    background-color: transparent;
+    border-color: rgba(244, 241, 232, 0.4);
+    color: #F4F1E8;
+  }
+  html[data-theme="dark"] .ab-cta .btn-outline-dark:hover,
+  html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-outline-dark:hover {
+    background-color: transparent;
+    border-color: var(--color-charcoal);
+    color: var(--color-charcoal);
+  }
+  html[data-theme="dark"] .ab-cta .btn-dark:hover,
+  html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-dark:hover {
+    background-color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+    color: var(--color-ivory);
+  }
+  .btn-outline-dark:active,
+  html[data-theme="dark"] .ab-cta .btn-outline-dark:active,
+  html[data-theme="dark"] [style*="background-color: var(--color-yellow)"] .btn-outline-dark:active {
+    background-color: var(--color-charcoal);
+    color: var(--color-yellow);
+  }
+
+  /* header icon buttons, drawer controls */
+  .theme-toggle-btn:hover,
+  .rtl-toggle-btn:hover {
+    background-color: rgba(244, 241, 232, 0.08);
+    border-color: rgba(244, 241, 232, 0.16);
+    color: var(--color-ivory);
+  }
+  .theme-toggle-btn:active,
+  .rtl-toggle-btn:active { background-color: var(--color-yellow); border-color: var(--color-yellow); color: var(--color-charcoal); }
+  .mobile-drawer__close:hover { color: var(--color-ivory); border-color: rgba(244, 241, 232, 0.16); }
+  .mobile-nav-link:hover:not(.active) { color: var(--color-ivory); }
+}
+
+/* ---------------------------------------------------------------
+   Dark mode fixes
+   1. Section icons (e.g. 4-Stage Precision Protocol) were charcoal on a
+      dark card, so they nearly disappeared. Use yellow on a slightly
+      stronger yellow tint.
+   2. Footer "EMERGENCY DESK" button: `.site-footer a:hover` (yellow text)
+      out-ranked `.btn-primary:hover`, giving yellow text on a yellow
+      button. Keep the button's own hover colours.
+   --------------------------------------------------------------- */
+[data-theme="dark"] .feature-box__icon {
+  background-color: rgba(229, 199, 71, 0.18);
+  border-color: var(--color-yellow);
+  color: var(--color-yellow);
+}
+[data-theme="dark"] .feature-box__icon svg {
+  stroke: var(--color-yellow);
+  color: var(--color-yellow);
+}
+
+.site-footer a.btn-primary,
+.site-footer a.btn-primary:hover,
+.site-footer a.btn-primary:focus-visible,
+.site-footer a.btn-primary:active {
+  color: var(--color-charcoal);
+}
+.site-footer a.btn-primary:hover {
+  background-color: #D4B53B;
+  border-color: #D4B53B;
+  box-shadow: 0 4px 14px rgba(229, 199, 71, 0.40);
+}
+[data-theme="dark"] .site-footer a.btn-primary,
+[data-theme="dark"] .site-footer a.btn-primary:hover,
+[data-theme="dark"] .site-footer a.btn-primary:focus-visible,
+[data-theme="dark"] .site-footer a.btn-primary:active {
+  color: var(--color-charcoal);
+}
+[data-theme="dark"] .site-footer a.btn-primary:hover {
+  background-color: #F0D55A;
+  border-color: #F0D55A;
+}
+[data-theme="dark"] .site-footer a.btn-primary svg {
+  stroke: currentColor;
+}
+
+/* ---------------------------------------------------------------
+   Active menu state - dark theme (LTR + RTL)
+   The header, dropdown and drawer are always dark surfaces, so the
+   active item is yellow on charcoal in both themes.
+   --------------------------------------------------------------- */
+[data-theme="dark"] .nav-dropdown {
+  background-color: var(--bg-dark-surface);
+  border-color: var(--border-dark);
+  border-top-color: var(--color-yellow);
+}
+[data-theme="dark"] .nav-link.active,
+[data-theme="dark"] .nav-dropdown__link.active,
+[data-theme="dark"] .mobile-nav-link.active {
+  color: var(--color-yellow);
+}
+[data-theme="dark"] .nav-link.active::after {
+  background-color: var(--color-yellow);
+}
+[data-theme="dark"] .nav-dropdown__link.active {
+  background-color: rgba(229, 199, 71, 0.14);
+}
+[data-theme="dark"] .nav-dropdown__link:not(.active):hover {
+  background-color: rgba(244, 241, 232, 0.06);
+  color: var(--color-yellow);
+}
+[data-theme="dark"][dir="rtl"] .nav-dropdown__link.active {
+  border-right-color: var(--color-yellow);
+}
+[data-theme="dark"] .mobile-drawer {
+  background-color: var(--bg-dark);
+}
